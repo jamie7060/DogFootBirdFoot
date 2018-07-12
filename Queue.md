@@ -15,3 +15,33 @@
 3 용도
 =====
 수강신청 사이트 같이 온 순서대로 처리하는 경우 사용된다.
+
+4 구현
+=====
+파이썬 리스트 자료형을 활용하여 큐를 구현할 수 있다.
+```python
+class Queue:
+    def __init__(self):
+        self.items = []
+
+    def isEmpty(self):
+        return self.items == []
+
+    def enqueue(self, item):
+        self.items.insert(0,item)
+
+    def dequeue(self):
+        return self.items.pop()
+
+    def size(self):
+        return len(self.items)
+        
+    def front(self):
+        return self[0]
+        
+    def back(self):
+        return self[-1]
+```
+
+출처: http://interactivepython.org/courselib/static/pythonds/BasicDS/ImplementingaQueueinPython.html
+다만, 백준 문제에서 요구하는 front와 back을 추가하였다.
