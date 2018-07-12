@@ -37,10 +37,10 @@ class Queue:
         return len(self.items)
         
     def front(self):
-        return self.items[0]
+        return self.items[-1]
         
     def back(self):
-        return self.items[-1]
+        return self.items[0]
 ```
 
 출처: http://interactivepython.org/courselib/static/pythonds/BasicDS/ImplementingaQueueinPython.html
